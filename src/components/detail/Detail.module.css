@@ -1,0 +1,13 @@
+.container{
+    /* border: 2px solid hsl(7, 85%, 50%); */
+    color: yellowgreen;
+}
+
+.h2{
+    font-size: 50px;
+    color: greenyellow;
+}
+
+img{
+    width:300px;
+}

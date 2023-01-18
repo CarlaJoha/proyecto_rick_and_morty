@@ -1,0 +1,12 @@
+.App {
+   height: 100vh;
+   margin: 0;
+   text-align: center;
+   background-image: url('./assets/image/Fondo3.jpg');
+   font-family:'Roboto', sans-serif;
+   background-repeat: no-repeat;
+   background-size: cover;
+   background-position: center;
+   -webkit-font-smoothing: antialiased;
+   -moz-osx-font-smoothing: grayscale;
+}

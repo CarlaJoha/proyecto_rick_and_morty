@@ -1,0 +1,23 @@
+nav{
+    height: 100px;
+    padding: 0 1.5em;
+    display: flex;
+    align-items: center;
+    margin-bottom: 4em;
+    /* border: 2px solid red; */
+    font-size: 15px;
+    color: white;
+}
+
+.logo{
+    width: 200px;
+    /* border: 2px solid yellow; */
+}
+
+.links{
+    font-size: 20px;
+    color: greenyellow;
+    margin-left: 2em;
+    display: flex;
+    
+}
