@@ -5,12 +5,14 @@ import About from './components/about/About'
 import Detail from './components/detail/Detail'
 import Footer from "./components/footer/Footer"
 import { useState } from 'react'; 
-import { Routes, Route } from 'react-router-dom'
+import { Routes, Route, useLocation } from 'react-router-dom'
+import Form from './components/form/Form'
 
 
 function App () {
 //STATE PARA AGREGAR EL ARRAY DE PERSONAJES
   const [characters, setCharacters] = useState([]);
+  const   location = useLocation();//useLocation, retorna un objeto con propiedades una de ellas pathname, me sirve para hacer un renderizado condicional
 
   const onSearch = (character) => {
     fetch(`https://rickandmortyapi.com/api/character/${character}`)
@@ -32,7 +34,8 @@ function App () {
 
   return (
     <div className='App' style={{ padding: '25px' }}>
-      <NavBar onSearch={onSearch} />
+      {location.pathname === "/" ? <Form /> :  <NavBar onSearch={onSearch} />}
+     
       <Routes>
         <Route path="home" element={<Cards onClose={onClose} characters={characters} /> } />
         <Route path="about" element={<About /> } />
@@ -56,3 +59,6 @@ export default App;
 //17.Para crear la ruta del componente del personaje, hay que crear el componente que muestra toda la info del personaje
 //18.Para eso importo Los Hooks useState desde react y useParams desde react-router-dom en el componente Detail
 //detailId es el nombre de la propiedad que va a tener el valor de lo que coloque el usuario
+//23.Para que el routa del Form no se muestre el NavBar, hago un renderizado condicional USELOCATION:
+//lo importo, lo declaro en una constante(location)
+//renderizo el condicional, si el pathname es igual a "/" que me muestre el componente Form, si no es "/ qu emuestre NavBar"

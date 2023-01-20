@@ -1,6 +1,7 @@
 .container{
     /* border: 2px solid hsl(7, 85%, 50%); */
     color: yellowgreen;
+    display: inline-block;
 }
 
 .h2{
@@ -10,4 +11,10 @@
 
 img{
     width:300px;
+}
+.button{
+    font-size: 20px;
+   
+    background: hsl(189, 100%, 59%);
+    border-radius: 5px;
 }

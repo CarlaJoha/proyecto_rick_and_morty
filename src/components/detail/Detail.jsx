@@ -30,16 +30,16 @@ useEffect(() => {
 
     return(
         <span className={style.container}>
-            <button>
+            <img src={character?.image} alt={character?.name} style={ {borderRadius: '99999rem'} }></img>
+            <h2 className={style.h2}>{character?.name}</h2> 
+            <p>Status: {character?.status}</p>
+            <p>Species: {character?.species}</p>
+            <p>Gender: {character?.gender}</p>
+            <p>Origin: {character?.origin?.name}</p>
+            <p>Location: {character?.location?.name}</p>
+            <button className={style.button}>
               <Link to="/home" >Home</Link>              
             </button>
-            <h2 className={style.h2}>{character?.name}</h2> 
-            <p>{character?.status}</p>
-            <p>{character?.species}</p>
-            <p>{character?.gender}</p>
-            <p>{character?.origin?.name}</p>
-            <p>{character?.location?.name}</p>
-            <img src={character?.image} alt={character?.name}></img>
         </span>
     )
 }

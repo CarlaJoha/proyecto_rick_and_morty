@@ -1,6 +1,6 @@
 import React from 'react';
 import style from './Card.module.css';
-import {Link } from "react-router-dom"
+import { Link } from "react-router-dom"
 
 //COMPONENTE DUMB
 export default function Card({ name, species, gender, image, onClose, id }) {

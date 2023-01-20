@@ -1,0 +1,51 @@
+.formContainer{
+    /* border: red solid 1px; */
+    width: 100%;
+    max-width: 600px;
+    height: 400px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url(../../assets/image/SuperNova.jpg);
+    box-shadow: 0 0 15px #ddd;
+    border-radius: 10px;
+
+}
+
+.input{
+    border: none;
+    width: 400px;
+    background-color: hsla(212, 93%, 40%, 0.555);
+    padding: .3em 0;
+    border-radius: 3em;
+    text-align: center;
+    color: hsl(0, 0%, 100%);
+    font-size: 1.1rem;
+    margin-right: 1em;
+    margin-bottom: 2em;
+}
+
+.button{
+    border: none;
+    width: 150px;
+    padding: .3em 0;
+    border: 2px solid yellowgreen;
+    background-color: hsla(212, 93%, 40%, 0.829);
+    color: rgb(130, 182, 9);
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 3em;
+    cursor: pointer;
+    
+}
+.button:hover{
+    background-color: hsla(128, 93%, 40%, 0.829);
+    color:hsla(212, 93%, 40%, 0.829);
+}
+
+.label{
+    color: rgb(50, 205, 97);
+    
+}
