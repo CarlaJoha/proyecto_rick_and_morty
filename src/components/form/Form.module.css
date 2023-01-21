@@ -24,13 +24,14 @@
     color: hsl(0, 0%, 100%);
     font-size: 1.1rem;
     margin-right: 1em;
-    margin-bottom: 2em;
+    margin-bottom: 0;
 }
 
 .button{
     border: none;
     width: 150px;
     padding: .3em 0;
+    margin-top: 2em;
     border: 2px solid yellowgreen;
     background-color: hsla(212, 93%, 40%, 0.829);
     color: rgb(130, 182, 9);
@@ -47,5 +48,11 @@
 
 .label{
     color: rgb(50, 205, 97);
+    padding: 1em;
     
+}
+
+.errors{
+    color: red;
+  
 }
