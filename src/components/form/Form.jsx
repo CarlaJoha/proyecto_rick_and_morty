@@ -3,7 +3,7 @@ import { useState } from 'react';
 import React from 'react';
 import validation from "./validation"
 
-const Form = () => {
+const Form = ({ login }) => {
 
     const [userData, setUserData] = useState({ 
         username: '', 
@@ -27,8 +27,12 @@ const Form = () => {
         }))
     }
 
+    const handleSubmit = (event) => {
+        login(userData)
+    }
+
     return(
-        <form className={style.formContainer}>
+        <form className={style.formContainer} onSubmit={handleSubmit} >
             <label className={style.label} htmlFor="username">Username:</label>
             <input className={style.input} type="text" name="username" value={userData.username} onChange={handleInputChange} placeholder="morty_smith@email.com"/>
             {errors.username && <p className={style.errors}>{errors.username}</p>}
@@ -54,4 +58,9 @@ la propiedad value, la defino con el nombre que le di al estado y el name del in
 35. En el handleInputChange, seteo también el estado del usuario y le paso todo lo que suceda en tiempo "real" con el input para emitir los mensaje de errores o no
 36.dentro del seteo del estado del userData llamo a validation le paso un objeto que tenga una copia del estado usuario y el seteo de la propiedad name del input, segun el value ingresado
 37. El estado errors, lo rederizo con un condicional(&&)
+38. Me voy a App, para simular una base de datos con el input.value
+41. Creo la función HandleSubmit, que ejecutará la función login recibida por props. Login recibirá por parámetro userData, como en App.
+42.Agrego handleSubmit(event) al formulario (etiqueta form) con el evento onSubmit:
+    --> agrego un event.PrenetDefault() porque cuando hay un evento tipo onSubmit, tiende a recargarse la página
+
 */

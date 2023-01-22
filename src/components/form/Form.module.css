@@ -4,6 +4,7 @@
     max-width: 600px;
     height: 400px;
     margin: 0 auto;
+    margin-top: 150px;
     display: flex;
     flex-direction: column;
     justify-content: center;

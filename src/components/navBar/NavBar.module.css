@@ -1,12 +1,14 @@
 nav{
-    height: 100px;
-    padding: 0 1.5em;
+    height: 50px;
+    padding: .5em 0;
+    border-radius: 15px;
     display: flex;
     align-items: center;
     margin-bottom: 4em;
     /* border: 2px solid red; */
     font-size: 15px;
     color: white;
+    background: url(../../assets/image/outerspace-58.gif.webp);
 }
 
 .logo{
@@ -16,8 +18,19 @@ nav{
 
 .links{
     font-size: 20px;
-    color: greenyellow;
+    color: yellowgreen;
     margin-left: 2em;
     display: flex;
+    gap: 1em;
     
+}
+
+.linkLogout{
+    color: yellowgreen;
+}
+.linkAbout{
+    color: yellowgreen;
+}
+.linkHome{
+    color: yellowgreen;
 }
