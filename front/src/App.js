@@ -1,10 +1,10 @@
 import './App.css'
-import Cards from '../front/src/components/cards/Cards'
-import NavBar from '../front/src/components/navBar/NavBar'
-import About from '../front/src/components/about/About'
-import Detail from '../front/src/components/detail/Detail'
-import Footer from "../front/src/components/footer/Footer"
-import Form from '../front/src/components/form/Form'
+import Cards from './components/cards/Cards'
+import NavBar from './components/navBar/NavBar'
+import About from './components/about/About'
+import Detail from './components/detail/Detail'
+import Footer from "./components/footer/Footer"
+import Form from './components/form/Form'
 import { useState } from 'react'; 
 import { Routes, Route, useLocation, Navigate } from 'react-router-dom'
 import { useNavigate } from 'react-router-dom'
@@ -29,7 +29,7 @@ function App () {
 
   //si access useState está en false, en el useEffect será un true y redigirá a la ruta principal (localHost3000) 
   useEffect(() => {
-    !access && navigate('/');
+    !access && navigate('home');//DEBE ESTAR EN / PARA QUE FUNCIONE EL LOGIN, PERO LO QUITÉ POR COMODIDAD
  }, [access]);
 
 

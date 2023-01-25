@@ -1,6 +1,6 @@
 nav{
-    height: 50px;
-    padding: .5em 0;
+    height: 60px;
+    padding: .1em 0;
     border-radius: 15px;
     display: flex;
     align-items: center;
@@ -8,21 +8,19 @@ nav{
     /* border: 2px solid red; */
     font-size: 15px;
     color: white;
-    background: url(../../assets/image/outerspace-43.gif.webp);
-
+    background: url(../../assets/image/outerspace-58.gif.webp);
 }
 
 .logo{
-    width: 200px;
+    width: 250px;
     /* border: 2px solid yellow; */
 }
 
 .links{
-    font-size: 20px;
+    font-size: 15px;
     color: yellowgreen;
-    margin-left: 2em;
     display: flex;
-    gap: 1em;
+    gap: .5em;
     
 }
 

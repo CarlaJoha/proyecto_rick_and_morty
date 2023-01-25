@@ -2,7 +2,7 @@
    height: 100vh;
    margin: 0;
    text-align: center;
-   background-image: url('./src/assets/image/Fondo3.jpg');
+   background-image: url('./assets/image/Fondo3.jpg');
    font-family:'Roboto', sans-serif;
    background-attachment: scroll;
    background-repeat: repeat;

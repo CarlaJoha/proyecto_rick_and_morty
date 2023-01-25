@@ -22,8 +22,8 @@ export default function SearchBar({characters, onSearch}) {
    return (
       <div className={style.div}>
          <input className={style.input} type='search' value={character} onChange={handleChange} />
-         <button className={style.buttonInput} onClick={ () => onSearch(character) }>Agregar</button>
-         <button className={style.buttonInput} >Agregar personaje</button>
+         <button className={style.buttonInput} onClick={ () => onSearch(character) }>AGREGAR</button>
+         <button className={style.buttonInput} >RANDOM</button>
       </div>
    );
 }

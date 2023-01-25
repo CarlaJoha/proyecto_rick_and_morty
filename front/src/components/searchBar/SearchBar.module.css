@@ -7,7 +7,7 @@
 
 .input{
     border: none;
-    width: 400px;
+    width: 300px;
     background-color: hsla(0, 0%, 50%, 0.541);
     padding: .3em 0;
     border-radius: 3em;
@@ -20,14 +20,19 @@
 
 .buttonInput{
     border: none;
-    width: 150px;
+    width: 90px;
+    height: 35px;
     padding: .3em 0;
     border: 2px solid hsl(189.64,56.38%,52.35%);
     background: none;
     color: hsl(72.24,69.01%,72.16%);
-    font-size: 1rem;
+    font-size: .8rem;
     font-weight: bold;
     border-radius: 3em;
     cursor: pointer;
     
+}
+.buttonInput:hover{
+    background-color: rgba(30, 231, 64, 0.692);
+    color: rgb(98, 0, 255);
 }
