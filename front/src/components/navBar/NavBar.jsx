@@ -1,8 +1,7 @@
-import SearchBar from "../searchBar/SearchBar"
-import style from './NavBar.module.css'
-import logo from '../../assets/image/logo.png'
-// import { Routes, Route } from "react-router-dom"
-import {Link } from "react-router-dom"
+import style from './NavBar.module.css';
+import SearchBar from "../searchBar/SearchBar";
+import logo from '../../assets/image/logo.png';
+import { Link } from "react-router-dom";
 
 
 function NavBar ({ onSearch }) {
@@ -11,14 +10,14 @@ function NavBar ({ onSearch }) {
             <Link to= "home">
             <img src={logo} className={style.logo} alt="logo"/>
             </Link>
-            <div>
-                <SearchBar onSearch={onSearch}/>
-            </div>
+ 
             <div className={style.links}>
                 <Link className={style.linkLogout} to="/">LOGOUT</Link>
                 <Link className={style.linkAbout}to="about">ABOUT</Link>
                 <Link className={style.linkHome} to="home">HOME</Link>
             </div>
+            
+            <SearchBar onSearch={onSearch}/>
         </nav>
     )
 }

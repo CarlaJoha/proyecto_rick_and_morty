@@ -6,19 +6,20 @@ import Detail from './components/detail/Detail'
 import Footer from "./components/footer/Footer"
 import Form from './components/form/Form'
 import { useState } from 'react'; 
-import { Routes, Route, useLocation, Navigate } from 'react-router-dom'
-import { useNavigate } from 'react-router-dom'
+import { Routes, Route, useLocation, useNavigate } from 'react-router-dom'
 import { useEffect } from 'react'
 
 
 function App () {
 //STATE PARA AGREGAR EL ARRAY DE PERSONAJES
-  const [characters, setCharacters] = useState([]);
   const   location = useLocation();//useLocation, retorna un objeto con propiedades una de ellas pathname, me sirve para hacer un renderizado condicional
-  const [ access, setAccess ] = useState(false);
-  const username = "carlajoha.work@gmail.com";
-  const password =  "*123456";
   const navigate = useNavigate();
+
+  const [characters, setCharacters] = useState([]);
+  const [ access, setAccess ] = useState(false);
+  
+  const username = "carlajoha.work@gmail.com";
+  const password =  "*12345";
 
   const login = (userData) => {
     if(userData.username === username && userData.password === password){
@@ -29,26 +30,27 @@ function App () {
 
   //si access useState está en false, en el useEffect será un true y redigirá a la ruta principal (localHost3000) 
   useEffect(() => {
-    !access && navigate('home');//DEBE ESTAR EN / PARA QUE FUNCIONE EL LOGIN, PERO LO QUITÉ POR COMODIDAD
+    !access && navigate('/');//DEBE ESTAR EN / PARA QUE FUNCIONE EL LOGIN, PERO LO QUITÉ POR COMODIDAD
  }, [access]);
 
 
   const onSearch = (character) => {
-    fetch(`https://localhost:3001/rickandmorty/character/${character}`)//antes `https://rickandmortyapi.com/api/character/${character}`
+    fetch(`http://localhost:3001/rickandmorty/onsearch/character/${character}`)//antes `https://rickandmortyapi.com/api/character/${character}`
     .then((response) => response.json())
     .then((data) => {  
-       if (data.name) {
-          setCharacters((oldChars) => [data, ...oldChars]);
+       if (data.id) {
+          setCharacters((oldChars) => [...oldChars, data]);
        } else {
-          window.alert('No hay personajes con ese ID');
+          alert('No hay personajes con ese ID');
        }
        console.log(data);
-    });
+    })
+    .catch(error => console.log(error) )
   }
 
   const onClose = (id) => {
-    setCharacters(characters.filter(character => character.id !== id))
-    
+    setCharacters(
+      characters.filter(character => character.id !== id))
   }
 
   return (

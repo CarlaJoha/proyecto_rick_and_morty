@@ -1,22 +1,15 @@
-import { useState } from 'react';
 import style from './SearchBar.module.css'
+import { useState } from 'react';
 
-export default function SearchBar({characters, onSearch}) {
+export default function SearchBar({ onSearch }) {
  //el estado interno es el que escribe el usuario en el input EL VALUE
  //agrego comillas al useState porque recibe un input text(string)
  const [character, setCharacter] = useState('')
-//  const [inputRepetido, setInput] = useState('')
+
 
    const handleChange = (event) => {
-       setCharacter(event.target.value)
-      // const inputRepetido = characters.find((element) => element === event.target.value);
-      //    inputRepetido(event)
-      //    if(!inputRepetido) { 
-      //       setCharacter(event.target.value)
-      //    } else {
-      //       alert("No se pueden mostar personajes repetidos")
-      //    }
-      }//el estado va a ser lo que sea que escriba el usuario
+       setCharacter(event.target.value);
+   }//el estado va a ser lo que sea que escriba el usuario
  
 
    return (
