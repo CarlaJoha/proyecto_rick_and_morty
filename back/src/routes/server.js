@@ -3,12 +3,13 @@ const getCharById = require("../controllers/getCharById")
 const getCharDetail = require("../controllers/getCharDetail")
 
 
-//ROUTE: Hace uso de la lógica y define la ruta
+//ROUTES: Hace uso de la lógica y define la ruta
 //Acá recibe la respuesta de la solicitud de los controladores
 
 http.createServer((request, response) => {
    
    response.setHeader('Access-Control-Allow-Origin', '*')//esto es cuando no nos deja hacer repeticiones del lado del servidor
+   
    let id = request.url.split('/').at(-1);//para obtener el id de la url (-1) porque el id está en el último índice del array
    
       if(request.url.includes("onsearch")){//en el path del navegador LA URL, tiene esta palabra \onsearch que ejecute:

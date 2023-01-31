@@ -31,18 +31,5 @@ module.exports = getCharById;
 
 
 /*
-3. GET Detail
-Ahora crearemos la ruta para obtener el detalle de un personaje.
 
-Dirígete a tu carpeta controllers y crea un archivo llamado getCharDetail.js. Dentro de este archivo deberás:
-
-Declarar una variable con el nombre "getCharDetail" y exportarla. Esta variable será una función que recibe dos parámetros: res y id.
-
-El resto de la lógica de esta función es exactamente igual al ejercicio anterior, con la diferencia que esta vez debes obtener todas estas propiedades del personaje: image, name, gender, status, origin y species.
-
-En tu archivo server.js tienes que:
-
-Importar el nuevo controlador.
-
-Crear un condicional que verifique si la URL recibida incluye el string "detail". En el caso de que esto sea verdadero tendrás que obtener el ID que recibes al final de la URL, y ejecutar este controlador pasándole como parámetros: res y ID.
- */
+*/

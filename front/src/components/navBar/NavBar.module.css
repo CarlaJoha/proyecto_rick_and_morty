@@ -17,9 +17,11 @@ nav{
 }
 
 .links{
+    border: 1px solid red;
     font-size: 15px;
     color: yellowgreen;
     display: flex;
+    
     gap: .5em;
     
 }
