@@ -2,12 +2,13 @@ import './App.css'
 import Cards from './components/cards/Cards'
 import NavBar from './components/navBar/NavBar'
 import About from './components/about/About'
-import Detail from './components/detail/Detail'
-import Footer from "./components/footer/Footer"
-import Form from './components/form/Form'
+import Detail from './components/detail/Detail';
+import Footer from "./components/footer/Footer";
+import Form from './components/form/Form';
+import Favorites from './components/favorites/Favorites';
 import { useState } from 'react'; 
-import { Routes, Route, useLocation, useNavigate } from 'react-router-dom'
-import { useEffect } from 'react'
+import { Routes, Route, useLocation, useNavigate } from 'react-router-dom';
+import { useEffect } from 'react';
 
 
 function App () {
@@ -61,6 +62,7 @@ function App () {
         <Route path="home" element={<Cards onClose={onClose} characters={characters} /> } />
         <Route path="about" element={<About /> } />
         <Route path="detail/:detailId" element={<Detail />} />
+        <Route path="/favorites" element={<Favorites />} />
       </Routes>
       <Footer/>
     </div>
@@ -98,4 +100,5 @@ En caso de que la función login se ejecute, useEffect no se va a ejecutar
 40. Le paso por props la función login al componente Form
 41. Voy al Componente Form y recibo la función login por pros
 
+44. Cree el componente Favorites, lo importé acá y creé una ruta
 */

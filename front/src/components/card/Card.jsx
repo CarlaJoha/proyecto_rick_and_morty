@@ -3,7 +3,7 @@ import style from './Card.module.css';
 import { Link } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { useState, useEffect } from 'react';
-import { addFavorite, deleteFavorite } from "../../redux/actions"
+import { addFavorite, deleteFavorite } from "../../redux/actions";
 
 //COMPONENTE DUMB
 export default function Card({ name, species, gender, image, onClose, id }) {
@@ -58,10 +58,11 @@ export default function Card({ name, species, gender, image, onClose, id }) {
    );
 }
 
+
 /*Acá CARD llama a la función onCLOSE dentro del EVENTO onClick  que elimina la Card al hacer Click en el boton
 envolvemos el nombre del personaje con un LINK
 me traigo el ID desde Cards que es el Padre, para poder usarla
-* Se Agrega un BOTON, y usar hook, para manejar el botón, 
+43. Se Agrega un BOTON, y usar hook, para manejar el botón, 
 * importo useDispatch de react-redux, dentro del componente, Creo la constante dispatch y la igualo a useDispatch() 
 * realizo dos funciones:
    1. Para AGREGAR UN PERSONAJE FAVORITO

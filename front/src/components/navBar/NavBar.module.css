@@ -17,14 +17,13 @@ nav{
 }
 
 .links{
+    width: 500px;
     border: 1px solid red;
     font-size: 15px;
     color: yellowgreen;
-    display: flex;
-    
-    gap: .5em;
-    
-}
+    display: block;
+    justify-content: flex-end;
+}  
 
 .linkLogout{
     color: yellowgreen;

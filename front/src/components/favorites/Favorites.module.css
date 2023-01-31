@@ -1,0 +1,80 @@
+.cardContainer{
+    width: 100%;
+    height: 500px;
+    display:flex;
+    flex-wrap: wrap;
+    gap: 3em;
+}
+
+.favorites{
+    color: yellowgreen;
+}
+
+.article{
+    width: 230px;
+    height: 280px;
+    box-shadow: 1px 1px 5px hsl(0, 0%, 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    position: relative;
+}
+
+.cardImage{
+    width: 160px;
+    height: 150px;
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: 1px 1px 20px hsl(0, 10%, 50%);
+    align-self: center;
+    position: absolute;
+    top: 3vh;
+}
+
+.cardButton{
+    width: 35px;
+    height: 25px;
+    overflow: hidden;
+    border: white;
+    background-color:rgba(255, 255, 255, 0);
+    border-radius: 50px;
+    position: absolute;
+}
+.cardButton:hover{
+    background-color:yellowgreen;
+}
+
+.heartButton {
+    width: 35px;
+    height: 25px;
+    margin-bottom: 3em;
+    overflow: hidden;
+    border: white;
+    background-color:rgba(255, 255, 255, 0);
+    border-radius: 50px;
+}
+.heartButton:hover{
+    background-color:rgb(50, 122, 205);
+}
+
+img{
+    width: 100%;
+}
+
+.cardInfo{
+    width: 100%;
+    height: 100px;
+    background-color: hsl(0, 0%, 100%);
+    border-radius: 5px;
+    text-align: center;
+    font-size: 15px;
+    line-height: .2;
+    padding: .5em 0;
+}
+
+.info{
+    text-align: left;
+    padding: 2em 3em;
+    margin-left: 1em;
+}
+
