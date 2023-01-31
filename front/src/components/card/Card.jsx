@@ -9,6 +9,7 @@ import { addFavorite, deleteFavorite } from "../../redux/actions"
 export default function Card({ name, species, gender, image, onClose, id }) {
    const dispatch = useDispatch();
    const [ isFav, setIsFav ] = useState(false);
+   const myFavorites = useSelector( state => state.myFavorites);
    
    const handleFavorite = () => {
       if (isFav){
@@ -20,27 +21,38 @@ export default function Card({ name, species, gender, image, onClose, id }) {
       }
    }
 
+   useEffect(() => {
+      myFavorites.forEach((fav) => {
+         if (fav.id === id) {
+            setIsFav(true);
+         }
+      });
+   }, [myFavorites]);
+
    return (
       <div className={style.cardContainer} >
-         {
-            isFav ? (
-               <button onClick={handleFavorite}>❤️</button>
-            ) : (
-               <button onClick={handleFavorite}>🤍</button>
-            )
-         }
-         <article className={style.article}>
-            <button className={style.cardButton} onClick={onClose}>X</button>
            
+         <article className={style.article}>
+                              
             <img className={style.cardImage} src={image} alt={name} />
            
             <div className={style.cardInfo} >
-              <div className={style.info}>
+               <div className={style.info}>
                   <Link to={`/detail/${id}`}>{name}</Link>
                   <p>Specie: {species}</p>
                   <p>Gender: {gender}</p>
+                  {
+                     isFav ? (
+                        <button className={style.heartButton} onClick={handleFavorite}>❤️</button>
+                     ) : (
+                        <button className={style.heartButton} onClick={handleFavorite}>🤍</button>
+                     )
+                  }
+
+                  <button className={style.cardButton} onClick={onClose}>X</button>
                </div>
             </div>
+
          </article>
       </div>
    );
@@ -66,5 +78,9 @@ me traigo el ID desde Cards que es el Padre, para poder usarla
 * Si EL estado local `isFav` es true, entonces se mostrará un botón. Si es false, se mostrará otro botón.
 * agrego condicional ternario en el renderizado html, con los dos botones, con su evento onClick y la función handlerFavorite  sin ejecutar
    se pregunta si isFav es true que ejecute a handleFavorite con corazón rojo, si es false, la ejecuta con el corazón blanco
-   
+
+PARA ASEGURAR QUE EL STATUS DEL ESTADO LOCAL SE MANTENGA, aunque entremos y salgamos del componente
+   * Uso el Hook UseSelector: el useSelector recibe automáticamente el estado global y le digo que del global, solo quiero el estado de myFavorites y lo guardo en la constante myFavorites
+   * importo USEEFFECT
+   * El useEFFECT comprobará si el personaje que contiene esta `Card` ya está dentro de tus favoritos. En ese caso setteará el estado **isFav** en true.
    */

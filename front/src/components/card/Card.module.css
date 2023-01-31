@@ -1,12 +1,14 @@
 .cardContainer{
-    /* border: 2px solid hsl(7, 85%, 50%); */
+    width: 250px;
+    height: 280px;
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: right;
     gap: 2em;
 }
+
 .article{
-    width: 225px;
+    width: 230px;
     height: 280px;
     box-shadow: 1px 1px 5px hsl(0, 0%, 100%);
     display: flex;
@@ -15,16 +17,8 @@
     position: relative;
 }
 
-.cardButton{
-    width: 25px;
-    align-items: initial;
-    display: flex;
-    flex-direction: column;
-    background-color: #97cd32a1;
-}
-
 .cardImage{
-    width: 150px;
+    width: 160px;
     height: 150px;
     border-radius: 50%;
     overflow: hidden;
@@ -34,9 +28,35 @@
     top: 3vh;
 }
 
+.cardButton{
+    width: 35px;
+    height: 25px;
+    overflow: hidden;
+    border: white;
+    background-color:rgba(255, 255, 255, 0);
+    border-radius: 50px;
+    position: absolute;
+}
+.cardButton:hover{
+    background-color:yellowgreen;
+}
+
+.heartButton {
+    width: 35px;
+    height: 25px;
+    margin-bottom: 3em;
+    overflow: hidden;
+    border: white;
+    background-color:rgba(255, 255, 255, 0);
+    border-radius: 50px;
+}
+.heartButton:hover{
+    background-color:rgb(50, 122, 205);
+}
+
 img{
     width: 100%;
-  }
+}
 
 .cardInfo{
     width: 100%;
@@ -54,3 +74,4 @@ img{
     padding: 2em 3em;
     margin-left: 1em;
 }
+
